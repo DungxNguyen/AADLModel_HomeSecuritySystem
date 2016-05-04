@@ -1,0 +1,120 @@
+verification plan HSSPlan for sysreq[
+
+	description"This is the verification plan for the requirements in sysreq"
+	
+		claim R1:"Smoke Detector detects smoke " [
+		
+			
+			rationale "This plan achieves a certification level of verification"
+			
+			activities
+			smoke_detector_Test:"Test of Smoke Detector efficiency":
+			HSSVerificationMethods.comp(smoke_detected, smoke_detector_triggered)
+			property values ()
+			[
+				weight 2
+				timeout 5
+			]						
+	]  
+	claim R2: "Access Point Monitor gets triggered upon detection of intruder" [
+			activities
+			intruder_detector_Test:"Test of Motion Sensor efficiency":
+			HSSVerificationMethods.comp(motion_detected, intruder_detector_triggered)
+			property values ()
+			[
+				weight 3
+				timeout 5
+			]
+	]
+	claim R3: "Local alarm gets triggered upon smoke/intruder detection"[
+			activities
+			Smoke_Alarm_Test:"Test of Fire Alarm efficiency":
+			HSSVerificationMethods.comp(smoke_detector_triggered, fire_alarm_triggered)
+			Intruder_Alarm_Test: "Test of Intruder Alarm efficiency":
+			HSSVerificationMethods.comp(intruder_detector_triggered, intruder_alarm_triggered)
+			property values ()
+			[
+				weight 10
+				timeout 5
+			]
+	]
+	
+	claim R4: "Mobile alarm gets triggered upon smoke/intruder detection"[
+			activities
+			Smoke_Alarm_Test1:"Test of Fire Alarm efficiency":
+			HSSVerificationMethods.comp(smoke_detector_triggered, fire_alarm_triggered)
+			Intruder_Alarm_Test1: "Test of Intruder Alarm efficiency":
+			HSSVerificationMethods.comp(intruder_detector_triggered, intruder_alarm_triggered)
+			property values ()
+			[
+				weight 10
+				timeout 5
+			]
+	]
+	
+	claim R5: "Remote alarm gets triggered upon smoke/intruder detection"[
+			activities
+			Smoke_Alarm_Test2:"Test of Fire Alarm efficiency":
+			HSSVerificationMethods.comp(smoke_detector_triggered, fire_alarm_triggered)
+			Intruder_Alarm_Test2: "Test of Intruder Alarm efficiency":
+			HSSVerificationMethods.comp(intruder_detector_triggered, intruder_alarm_triggered)
+			property values ()
+			[
+				weight 10
+				timeout 5
+			]
+	]
+	
+	claim R6: "Home owner gets notified of the smoke or intruder detection"[
+			activities
+			Homeowner_Notification_Test1: "Test of Home owner notification efficiency":
+			HSSVerificationMethods.comp(fire_alarm_triggered, mobile_notification_delay)
+			Homeowner_Notification_Test2: "Test of Home owner notification efficiency":
+			HSSVerificationMethods.comp(intruder_alarm_triggered, mobile_notification_delay)
+			property values ()
+			[
+				weight 10
+				timeout 5
+			]
+	]
+	
+	claim R7: "Respective Authority/Department gets notified of the smoke or intruder detection"[
+			activities
+			Authority_Notification_Test1: "Test of Fire Department/Authority notification efficiency":
+			HSSVerificationMethods.comp(fire_alarm_triggered, authority_notification_delay)
+			Authority_Notification_Test2: "Test of Police Department/Authority notification efficiency":
+			HSSVerificationMethods.comp(intruder_alarm_triggered, authority_notification_delay)
+			property values ()
+			[
+				weight 10
+				timeout 5
+			]
+	]
+	
+	claim responsiveness_R8: "The maximum latency allowed for the entire system(all end-to-end flows) is 4ms" [
+			activities
+			Latency_Test1 : "Test of system end-to-end latency":
+			HSSVerificationMethods.comp(smoke_detected, authority_notification_delay)
+			Latency_Test2 : "Test of system end-to-end latency":
+			HSSVerificationMethods.comp(motion_detected, authority_notification_delay)
+	]
+	
+	claim robust_R10: "The system failure rate must be equal to 0" [
+		activities
+		Robustness_Test : "Test of system end-to-end latency":
+			HSSVerificationMethods.robust(no_of_failures)
+		
+	]
+	
+	claim Systemwide_R1[
+		activities
+		enforcePeriod:"resolute constraint":
+		resoluteMethods.enforcePeriod()
+		assert all[enforcePeriod]
+	]
+
+	
+
+]
+
+	

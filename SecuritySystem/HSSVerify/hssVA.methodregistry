@@ -1,0 +1,13 @@
+verification methods HSSVerificationMethods: "Activities for sysreq" [
+	method comp (double event_a_time , double event_b_time):"Compute the delay or latency"[
+		java HSSVerify.ComputeDelay.comp
+		description "A test of efficiency"
+	]
+	
+    method robust (double no_of_failures):"Compute the number of times the system fails over the warranty period of time"[
+		java HSSVerify.ComputeFailures.robust
+		description "A test of efficiency"
+	]]		
+	
+
+	

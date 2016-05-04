@@ -1,0 +1,38 @@
+stakeholder goals SecGoals for SecuritySystem::SecuritySystemImpl [
+goal g1 : "Safety" [
+description "The system shall be safe."
+rationale "This is a control system, whose failure affects lives. "
+stakeholder SecuritySystem.as
+]
+
+goal g2: "Reliability"[
+description "The system shall be reliable."
+rationale "This is a control system, whose failure affects lives. "
+stakeholder SecuritySystem.mm	
+]
+
+goal g3: "Availability"[
+description "The system shall be available."
+rationale "This is a control system, which should operate all the time. "
+stakeholder SecuritySystem.as	
+]	
+
+goal g4: "Correctness"[
+description "The system shall operate correctly."
+rationale "This is a control system, which should operate in the most accurate manner. "
+stakeholder SecuritySystem.mm	
+]	
+
+goal g5: "Latency"[
+description "The system should have minimum latency among all of its components and it should respond as quickly as possible."
+rationale "Security System should be highly responsive since it's operation is critical in saving lives "
+stakeholder SecuritySystem.as	
+]
+
+goal g6: "Usability"[
+description "The system should be easy to use."
+rationale "One should be able to operate the security system in an easy manner "
+stakeholder SecuritySystem.as	
+]]
+
+

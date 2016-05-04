@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="SecuritySystem_with_devices_Instance" category="system">
+  <componentInstance name="this_Bus" srcConnectionInstance="//@connectionInstance.0 //@connectionInstance.1 //@connectionInstance.2 //@connectionInstance.3 //@connectionInstance.4 //@connectionInstance.5" category="bus">
+    <subcomponent xsi:type="aadl2:BusSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance name="this_MotionDetector" category="device">
+    <featureInstance name="Motion_Detected" srcConnectionInstance="//@connectionInstance.6" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="Bus_Access" dstConnectionInstance="//@connectionInstance.0" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.0"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance name="this_MagneticAlarmSensor" category="device">
+    <featureInstance name="alarm_set_off" srcConnectionInstance="//@connectionInstance.7" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="Bus_Access" dstConnectionInstance="//@connectionInstance.1" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.1"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance name="this_SmokeDetector" category="device">
+    <featureInstance name="Smoke_Detected" srcConnectionInstance="//@connectionInstance.8" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="Bus_Access" dstConnectionInstance="//@connectionInstance.2" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.2"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance name="this_IntruderAlarm" category="device">
+    <featureInstance name="I_alarm_on_off" dstConnectionInstance="//@connectionInstance.11" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="Bus_Access" dstConnectionInstance="//@connectionInstance.3" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.3"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance name="this_FireAlarm" category="device">
+    <featureInstance name="F_alarm_on_off" dstConnectionInstance="//@connectionInstance.10" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="Bus_Access" dstConnectionInstance="//@connectionInstance.4" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.4"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance name="this_Mobile" category="device">
+    <featureInstance name="notification_in" dstConnectionInstance="//@connectionInstance.9" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedEventPort.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.5"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance name="this_Controller" category="process">
+    <featureInstance name="motion_in" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="smoke_in" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedEventPort.1"/>
+    </featureInstance>
+    <featureInstance name="magnetic_in" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedEventPort.2"/>
+    </featureInstance>
+    <featureInstance name="IAlarm_out" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedEventPort.3"/>
+    </featureInstance>
+    <featureInstance name="FAlarm_out" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedEventPort.4"/>
+    </featureInstance>
+    <featureInstance name="notification_out" srcConnectionInstance="//@connectionInstance.9" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedEventPort.5"/>
+    </featureInstance>
+    <componentInstance name="this_threadMotion" category="thread">
+      <featureInstance name="motion_in" dstConnectionInstance="//@connectionInstance.6" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.0"/>
+      </featureInstance>
+      <featureInstance name="motion_out" srcConnectionInstance="//@componentInstance.7/@connectionInstance.0" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedEventPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+    </componentInstance>
+    <componentInstance name="this_threadSmoke" category="thread">
+      <featureInstance name="smoke_in" dstConnectionInstance="//@connectionInstance.8" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedEventPort.0"/>
+      </featureInstance>
+      <featureInstance name="smoke_out" srcConnectionInstance="//@componentInstance.7/@connectionInstance.1" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedEventPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedThreadSubcomponent.1"/>
+      <index>0</index>
+    </componentInstance>
+    <componentInstance name="this_threadMagnetic" category="thread">
+      <featureInstance name="magnetic_in" dstConnectionInstance="//@connectionInstance.7" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedEventPort.0"/>
+      </featureInstance>
+      <featureInstance name="magnetic_out" srcConnectionInstance="//@componentInstance.7/@connectionInstance.2" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedEventPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedThreadSubcomponent.2"/>
+      <index>0</index>
+    </componentInstance>
+    <componentInstance name="this_threadControlRules" category="thread">
+      <featureInstance name="motion_in" dstConnectionInstance="//@componentInstance.7/@connectionInstance.0" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedEventPort.0"/>
+      </featureInstance>
+      <featureInstance name="smoke_in" dstConnectionInstance="//@componentInstance.7/@connectionInstance.1" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedEventPort.1"/>
+      </featureInstance>
+      <featureInstance name="magnetic_in" dstConnectionInstance="//@componentInstance.7/@connectionInstance.2" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedEventPort.2"/>
+      </featureInstance>
+      <featureInstance name="FAlarm_out" srcConnectionInstance="//@connectionInstance.10" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedEventPort.3"/>
+      </featureInstance>
+      <featureInstance name="IAlarm_out" srcConnectionInstance="//@connectionInstance.11" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedEventPort.4"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedThreadSubcomponent.3"/>
+      <index>0</index>
+    </componentInstance>
+    <connectionInstance name="this_threadMotion.motion_out -> this_threadControlRules.motion_in" complete="true" kind="portConnection" destination="//@componentInstance.7/@componentInstance.3/@featureInstance.0" source="//@componentInstance.7/@componentInstance.0/@featureInstance.1">
+      <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@componentInstance.0/@featureInstance.1" destination="//@componentInstance.7/@componentInstance.3/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedPortConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="this_threadSmoke.smoke_out -> this_threadControlRules.smoke_in" complete="true" kind="portConnection" destination="//@componentInstance.7/@componentInstance.3/@featureInstance.1" source="//@componentInstance.7/@componentInstance.1/@featureInstance.1">
+      <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@componentInstance.1/@featureInstance.1" destination="//@componentInstance.7/@componentInstance.3/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedPortConnection.4"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="this_threadMagnetic.magnetic_out -> this_threadControlRules.magnetic_in" complete="true" kind="portConnection" destination="//@componentInstance.7/@componentInstance.3/@featureInstance.2" source="//@componentInstance.7/@componentInstance.2/@featureInstance.1">
+      <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@componentInstance.2/@featureInstance.1" destination="//@componentInstance.7/@componentInstance.3/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedPortConnection.5"/>
+      </connectionReference>
+    </connectionInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance name="this_security_protocols" category="process">
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.1"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance name="this_processor" category="processor">
+    <featureInstance name="Bus_Access" dstConnectionInstance="//@connectionInstance.5" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
+    </featureInstance>
+    <componentInstance name="this_ram" category="memory">
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedMemorySubcomponent.0"/>
+      <index>0</index>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+    <index>0</index>
+  </componentInstance>
+  <connectionInstance name="this_Bus -> this_MotionDetector.Bus_Access" complete="true" kind="accessConnection" destination="//@componentInstance.1/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.1/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_Bus -> this_MagneticAlarmSensor.Bus_Access" complete="true" kind="accessConnection" destination="//@componentInstance.2/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.2/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_Bus -> this_SmokeDetector.Bus_Access" complete="true" kind="accessConnection" destination="//@componentInstance.3/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.3/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_Bus -> this_IntruderAlarm.Bus_Access" complete="true" kind="accessConnection" destination="//@componentInstance.4/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.4/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_Bus -> this_FireAlarm.Bus_Access" complete="true" kind="accessConnection" destination="//@componentInstance.5/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.5/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_Bus -> this_processor.Bus_Access" complete="true" kind="accessConnection" destination="//@componentInstance.9/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.9/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_MotionDetector.Motion_Detected -> this_Controller.this_threadMotion.motion_in" complete="true" kind="portConnection" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.0" source="//@componentInstance.1/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.1/@featureInstance.0" destination="//@componentInstance.7/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@featureInstance.0" destination="//@componentInstance.7/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_MagneticAlarmSensor.alarm_set_off -> this_Controller.this_threadMagnetic.magnetic_in" complete="true" kind="portConnection" destination="//@componentInstance.7/@componentInstance.2/@featureInstance.0" source="//@componentInstance.2/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.2/@featureInstance.0" destination="//@componentInstance.7/@featureInstance.2">
+      <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.2"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@featureInstance.2" destination="//@componentInstance.7/@componentInstance.2/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedPortConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_SmokeDetector.Smoke_Detected -> this_Controller.this_threadSmoke.smoke_in" complete="true" kind="portConnection" destination="//@componentInstance.7/@componentInstance.1/@featureInstance.0" source="//@componentInstance.3/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.0" destination="//@componentInstance.7/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@featureInstance.1" destination="//@componentInstance.7/@componentInstance.1/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedPortConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_Controller.notification_out -> this_Mobile.notification_in" complete="true" kind="portConnection" destination="//@componentInstance.6/@featureInstance.0" source="//@componentInstance.7/@featureInstance.5">
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.5" destination="//@componentInstance.6/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_Controller.this_threadControlRules.FAlarm_out -> this_FireAlarm.F_alarm_on_off" complete="true" kind="portConnection" destination="//@componentInstance.5/@featureInstance.0" source="//@componentInstance.7/@componentInstance.3/@featureInstance.3">
+    <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@componentInstance.3/@featureInstance.3" destination="//@componentInstance.7/@featureInstance.4">
+      <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedPortConnection.7"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.4" destination="//@componentInstance.5/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="this_Controller.this_threadControlRules.IAlarm_out -> this_IntruderAlarm.I_alarm_on_off" complete="true" kind="portConnection" destination="//@componentInstance.4/@featureInstance.0" source="//@componentInstance.7/@componentInstance.3/@featureInstance.4">
+    <connectionReference context="//@componentInstance.7" source="//@componentInstance.7/@componentInstance.3/@featureInstance.4" destination="//@componentInstance.7/@featureInstance.3">
+      <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedPortConnection.6"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.3" destination="//@componentInstance.4/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../HSS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <systemOperationMode name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:SystemImplementation" href="../HSS.aadl#HSS.SecuritySystem.with_devices"/>
+</instance:SystemInstance>

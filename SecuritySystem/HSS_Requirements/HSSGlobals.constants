@@ -1,0 +1,9 @@
+constants caccConstants[
+	
+	val Bell_Cutoff = 5 min         //Bell Cutoff is the amount of time before an alarm system’s siren (or bell) shuts off automatically after an alarm takes place. In many jurisdictions, this is required by law to be between 5 and 10 minutes    
+	val Entry_Delay = 2 min         //The time delay before an alarm occurs after a triggering event
+	val Exit_Delay = 10 ms          //The time delay between the point a system is turned on (armed) and the point when it becomes active. During the delay, tripping a detection device (opening a door, moving in front of a motion sensor, etc.) will normally NOT cause an alarm
+	val Sensing_Frequency = 2 ms    
+	val Notification_Delay= 10 ms   //The time elapsed between the alarm trigger event and notification sent to the mobile device
+	
+]

@@ -1,0 +1,145 @@
+case HSSAssuranceCase
+[
+	tbdcount 0
+	model HSSAssuranceCase.HSSAssurancePlan
+	for HSS::SecuritySystem.with_devices
+		[
+		tbdcount 0
+		claim sysreq.R1
+		[
+			tbdcount 0
+			verification HSSPlan.smoke_detector_Test
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+		]
+		claim sysreq.R2
+		[
+			tbdcount 0
+			verification HSSPlan.intruder_detector_Test
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+		]
+		claim sysreq.R3
+		[
+			tbdcount 0
+			verification HSSPlan.Smoke_Alarm_Test
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+			verification HSSPlan.Intruder_Alarm_Test
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+		]
+		claim sysreq.R4
+		[
+			tbdcount 0
+			verification HSSPlan.Smoke_Alarm_Test1
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+			verification HSSPlan.Intruder_Alarm_Test1
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+		]
+		claim sysreq.R5
+		[
+			tbdcount 0
+			verification HSSPlan.Smoke_Alarm_Test2
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+			verification HSSPlan.Intruder_Alarm_Test2
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+		]
+		claim sysreq.R6
+		[
+			tbdcount 0
+			verification HSSPlan.Homeowner_Notification_Test1
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+			verification HSSPlan.Homeowner_Notification_Test2
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+		]
+		claim sysreq.R7
+		[
+			tbdcount 0
+			verification HSSPlan.Authority_Notification_Test1
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+			verification HSSPlan.Authority_Notification_Test2
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+		]
+		claim sysreq.responsiveness_R8
+		[
+			tbdcount 0
+			verification HSSPlan.Latency_Test1
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+			verification HSSPlan.Latency_Test2
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+		]
+		claim sysreq.robust_R10
+		[
+			tbdcount 0
+			verification HSSPlan.Robustness_Test
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+		]
+		claim sysreq.Systemwide_R1
+		[
+			tbdcount 0
+			verification HSSPlan.enforcePeriod
+			[
+				executionstate todo
+				resultstate tbd
+				tbdcount 0
+			]
+		]
+		]
+]

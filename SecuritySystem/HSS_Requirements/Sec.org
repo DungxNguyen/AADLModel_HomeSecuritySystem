@@ -1,0 +1,11 @@
+organization SecuritySystem
+stakeholder as [
+full name "Adhvik Shetty"
+title "Student"
+email "ashetty@g.clemson.edu"
+]
+stakeholder mm [
+full name "Manasa Manjunath"
+title "Student"
+email "mmanjun@g.clemson.edu"
+]

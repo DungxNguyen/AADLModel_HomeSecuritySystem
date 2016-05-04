@@ -1,0 +1,7 @@
+verification methods resoluteMethods: "Activities for caccReqs" [
+	
+	method enforcePeriod:""[
+	resolute SystemWideReq1
+	]	
+	
+]

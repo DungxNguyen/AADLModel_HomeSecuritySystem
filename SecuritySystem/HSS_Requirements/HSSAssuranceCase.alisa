@@ -1,0 +1,33 @@
+assurance case HSSAssuranceCase:"Assurance case for the Home Security System" for HSS::SecuritySystem[
+
+assurance plan HSSAssurancePlan: "The assurance case for the HSS implementation" 
+for HSS::SecuritySystem.with_devices [
+	assure HSSPlan
+	issues "This assurance plan is related to the assurance case for HSS "
+]
+
+assurance task at_1: "This task is for Smoke Detector"[
+	description"The smoke detector should detect smoke or fire accurately and quickly"
+	category arm disarm
+] 
+
+assurance task at_2: "This task is for Intruder Detector"[
+	description"The intruder detector should detect motion accurately and quickly"
+	category arm disarm
+] 
+
+assurance task at_3: "This task is for any(Local,Remote or Mobile) Alarm device"[
+	description"The alarm should ring quickly when smoke or motion is detected"
+	category arm disarm
+] 
+
+assurance task at_4: "This task is for Home Owner/Authority Notification"[
+	description"The Home Owner and Respective Authority should be notified of an alarm trigger event quickly"
+	category arm disarm
+] 
+
+assurance task at_5: "This task is for System Robustness"[
+	description"The system failure rate should be approximately 0"
+	category arm disarm
+] 
+]

@@ -1,0 +1,9 @@
+Fault Impact of System Internal Error Sources
+
+Component, Initial Failure Mode, 1st Level Effect, Failure Mode, second Level Effect, Failure Mode, third Level Effect, Failure Mode, 4th Level Effect, Failure Mode, 5th Level Effect, Failure Mode, 6th Level Effect, Failure Mode, 7th Level Effect, More
+this_MotionDetector,{LateDelivery},{LateDelivery} Motion_Detected -> this_Controller:motion_in, this_Controller {LateDelivery} [Masked],
+this_Controller,{LateDelivery},{LateDelivery} IAlarm_out -> this_IntruderAlarm:I_alarm_on_off, this_IntruderAlarm {LateDelivery} [Masked],
+this_Controller,{LateDelivery},{LateDelivery} FAlarm_out -> this_FireAlarm:F_alarm_on_off, this_FireAlarm {LateDelivery} [Masked],
+this_Controller,{LateDelivery},{LateDelivery} notification_out -> this_Mobile:notification_in, this_Mobile {LateDelivery} [Masked],
+this_MagneticAlarmSensor,{LateDelivery},{LateDelivery} alarm_set_off -> this_Controller:magnetic_in, this_Controller {LateDelivery} [Masked],
+this_SmokeDetector,{LateDelivery},{LateDelivery} Smoke_Detected -> this_Controller:smoke_in, this_Controller {LateDelivery} [Masked],
